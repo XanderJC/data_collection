@@ -1,0 +1,7 @@
+numpy
+jax
+jaxlib
+matplotlib
+dill
+torch
+torchvision
