@@ -5,7 +5,6 @@ import numpy as np
 import dill
 
 choice = np.random.binomial(1, 0.5)
-choice = 0
 if choice == 0:
     method = RandomController()
 else:
