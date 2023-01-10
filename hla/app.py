@@ -5,6 +5,7 @@ import numpy as np
 import dill
 
 choice = np.random.binomial(1, 0.5)
+choice = 0
 if choice == 0:
     method = RandomController()
 else:
@@ -17,7 +18,8 @@ message = "This is an example test image. \n\
 Please click through the explanations \n\
 to have a look at how the system works \n\
 and what the possible explanations \n\
-look like."
+look like. Each explanation has a \n\
+short description of how it works."
 
 s_message = "Now you have seen how the system works, \n\
 please select which explanation you think is most useful."
@@ -35,7 +37,7 @@ app.destroy()
 info = CollectInfo(selection_message=s_message)
 info.mainloop()
 initial_pick = info.interaction.selected_class
-print(initial_pick)
+
 info.destroy()
 
 

@@ -126,8 +126,8 @@ mixture of the corpus representations."
 
         self.selected_explanations = [self.all_explanations[i] for i in explainers_list]
         self.begin = [
-            Explanation(self, "Don't click until\nyou make prediction"),
-            Explanation(self, f"The ML algorithm predicts:\n{pred}"),
+            Explanation(self, "Don't click until you make\nyour first prediction"),
+            Explanation(self, f"The ML algorithm predicts:\n\n{pred}"),
         ]
         self.end = [
             Explanation(self, "No more explanations"),
@@ -218,7 +218,10 @@ class InteractionFrame(tk.Frame):
 
         message = ttk.Label(
             self,
-            text="Click through explanations\n\nUntil you make your second selection:",
+            text="Now please click through explanations until\n\
+you are convinced of the model's prediction \n\
+or there are no more explanations!\n\
+Then please make your final decision:",
         )
         message.grid(column=1, row=0, padx=5, pady=5)
 

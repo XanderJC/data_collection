@@ -7,9 +7,9 @@ In order to run the program, please follow these steps:
 This repo is pip installable - in the terminal: clone it, create a virtual env, and install it:
 
 ```shell
-git clone https://github.com/XanderJC/human-loop-app.git
+git clone https://github.com/XanderJC/data_collection.git
 
-cd human-loop-app
+cd data_collection
 
 pip install -r requirements.txt
 pip install -e .
