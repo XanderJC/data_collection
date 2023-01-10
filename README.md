@@ -34,5 +34,6 @@ Once over, a results file called results_{YOUR_NAME}.obj should have been create
 
 Once again, thank you for your participation!
 
+NOTE: If your system theme is set to 'dark mode' it may cause some visibility issues
 
 
