@@ -89,9 +89,9 @@ class ArdentController(BaseController):
             _bqs_log += (i + 1) * qs[:, e, x]
             _bms_log += (i + 1) * _ms[_ks, ...][:, e, x]
 
-        
+
         _bqs_log = _bqs_log - logsumexp(_bqs_log, keepdims=True)
-        
+
         _bms_log = _bms_log - logsumexp(_bms_log, keepdims=True)
         ws = _bqs_log[:, a] - _bms_log[:, a]
         ws = jnp.exp(ws - logsumexp(ws))
@@ -109,7 +109,11 @@ class ArdentController(BaseController):
 
         explainers = explainers_given[:explanations_viewed]
 
-        if explanations_viewed != 0:
+        if (
+            (explanations_viewed != 0)
+            & (init_action != updated_action)
+            & (updated_action != -1)
+        ):
             qs, ws = self._posterior_update(self.qs, self.ws, explainers)
         else:
             qs, ws = self.qs, self.ws
