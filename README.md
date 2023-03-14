@@ -19,7 +19,7 @@ This has been tested on Python 3.10.6.
 
 Start the experiment by running
 ```shell
-python hla/app.py
+python hla/app_favourite.py
 ```
 
 This will prompt you to enter your name in the terminal, do this and press enter.
