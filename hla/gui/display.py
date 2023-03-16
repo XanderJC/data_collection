@@ -170,7 +170,6 @@ class FavouriteFrame(tk.Frame):
         self.selection.bind("<<ListboxSelect>>", self.selected)
 
     def get_decision_selection(self):
-
         var = tk.Variable(value=self.explainers)
         return tk.Listbox(
             self,
@@ -230,7 +229,6 @@ Then please make your final decision:",
         self.second_selection.bind("<<ListboxSelect>>", self.second_selected)
 
     def get_decision_selection(self):
-
         var = tk.Variable(value=self.classes)
         return tk.Listbox(
             self,
@@ -301,7 +299,6 @@ class MainDisplay(tk.Tk):
         self.control.grid(column=1, row=1, padx=5, pady=5)
 
     def get_results(self):
-
         max_explainers = len(self.explainers_list)
         first = (
             self.interaction.selected_first[0]
