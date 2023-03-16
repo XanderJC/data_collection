@@ -1,6 +1,6 @@
 from hla import TEST_INDEX
 from hla.gui import MainDisplay, CollectInfo
-from hla.controllers import FavouriteControllerghgjh
+from hla.controllers import FavouriteController
 import dill
 
 
